@@ -5,7 +5,7 @@
 - ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 
 ## How to run
-- Simply visit this [link](zaks276.github.io/calculator-app/) to use the app.
+- Simply visit this [link](https://zaks276.github.io/calculator-app/) to use the app.
 
 ## About 
 This calculator web app can compute division, multiplication, substraction and addition for decimal and binary numbers. 
