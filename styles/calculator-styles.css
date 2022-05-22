@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-family: 'Varela Round', sans-serif;
+    font-weight: 600;
+}
+
+.navbar {
+    background-color: rgba(255, 255, 255, 0.75);
+    overflow: hidden;
+    list-style: none;
+    margin: 0;
+    padding: 0%;
+    text-align: center;
+}
+
+.navbar li {
+    display: inline;
+}
+
+.navbar a {
+    display: inline-block;
+    font-size: 1.2rem;
+    padding: 15px;
+    text-decoration: none;
+    color: black;
+    margin: 0%;
+    outline: none;
+}
+
+.navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    cursor: pointer;
+}
+
+.navbar a.active {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+body {
+    padding: 0;
+    margin: 0%;
+    background: linear-gradient(to right, #00aaff, #00ff6c);
+}
+
+.calculator-grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 90px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.calculator-grid > button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid white;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.calculator-grid > button:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+#border-button-left {
+    border-bottom-left-radius: 0.9rem;
+}
+
+#border-button-right {
+    border-bottom-right-radius: 0.9rem;
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+.output {
+    grid-column: 1 / -1;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+    border-top-left-radius: 0.9rem;
+    border-top-right-radius: 0.9rem;
+}
+
+.output .previous-operand {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 1.5rem;
+}
+
+.output .current-operand {
+    color: white;
+    font-size: 2.5rem;
+}
