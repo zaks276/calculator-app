@@ -87,6 +87,47 @@ const binaryCalculator = new BinaryCalculator(
     currentOperandTextElement
 );
 
+document.onkeydown = (event) => {
+    switch (event.key) {
+        case '0':
+            binaryCalculator.appendNumber('0');
+            binaryCalculator.updateDisplay();
+            break;
+        case '1':
+            binaryCalculator.appendNumber('1');
+            binaryCalculator.updateDisplay();
+            break;
+        case '+':
+            binaryCalculator.chooseOperation('+');
+            binaryCalculator.updateDisplay();
+            break;
+        case '-':
+            binaryCalculator.chooseOperation('-');
+            binaryCalculator.updateDisplay();
+            break;
+        case '*':
+            binaryCalculator.chooseOperation('×');
+            binaryCalculator.updateDisplay();
+            break;
+        case '/':
+            binaryCalculator.chooseOperation('÷');
+            binaryCalculator.updateDisplay();
+            break;
+        case 'Enter':
+            binaryCalculator.compute();
+            binaryCalculator.updateDisplay();
+            break;
+        case 'Backspace':
+            binaryCalculator.delete();
+            binaryCalculator.updateDisplay();
+            break;
+        case 'Delete':
+            binaryCalculator.clear();
+            binaryCalculator.updateDisplay();
+            break;
+    }
+}
+
 numberButtons.forEach((button) => {
     button.addEventListener('click', () => {
         binaryCalculator.appendNumber(button.innerText);
