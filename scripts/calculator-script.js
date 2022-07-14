@@ -109,6 +109,83 @@ const calculator = new Calculator(
     currentOperandTextElement
 );
 
+document.onkeydown = (event) => {
+    switch (event.key) {
+        case '1':
+            calculator.appendNumber('1');
+            calculator.updateDisplay();
+            break;
+        case '2':
+            calculator.appendNumber('2');
+            calculator.updateDisplay();
+            break;
+        case '3':
+            calculator.appendNumber('3');
+            calculator.updateDisplay();
+            break;
+        case '4':
+            calculator.appendNumber('4');
+            calculator.updateDisplay();
+            break;
+        case '5':
+            calculator.appendNumber('5');
+            calculator.updateDisplay();
+            break;
+        case '6':
+            calculator.appendNumber('6');
+            calculator.updateDisplay();
+            break;
+        case '7':
+            calculator.appendNumber('7');
+            calculator.updateDisplay();
+            break;
+        case '8':
+            calculator.appendNumber('8');
+            calculator.updateDisplay();
+            break;
+        case '9':
+            calculator.appendNumber('9');
+            calculator.updateDisplay();
+            break;
+        case '0':
+            calculator.appendNumber('0');
+            calculator.updateDisplay();
+            break;
+        case '.':
+            calculator.appendNumber('.');
+            calculator.updateDisplay();
+            break;
+        case '+':
+            calculator.chooseOperation('+');
+            calculator.updateDisplay();
+            break;
+        case '-':
+            calculator.chooseOperation('-');
+            calculator.updateDisplay();
+            break;
+        case '*':
+            calculator.chooseOperation('×');
+            calculator.updateDisplay();
+            break;
+        case '/':
+            calculator.chooseOperation('÷');
+            calculator.updateDisplay();
+            break;
+        case 'Enter':
+            calculator.compute();
+            calculator.updateDisplay();
+            break;
+        case 'Backspace':
+            calculator.delete();
+            calculator.updateDisplay();
+            break;
+        case 'Delete':
+            calculator.clear();
+            calculator.updateDisplay();
+            break;
+    }
+}
+
 numberButtons.forEach((button) => {
     button.addEventListener('click', () => {
         calculator.appendNumber(button.innerText);
@@ -137,3 +214,5 @@ deleteButton.addEventListener('click', (button) => {
     calculator.delete();
     calculator.updateDisplay();
 });
+
+
